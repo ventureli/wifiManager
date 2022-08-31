@@ -4,7 +4,6 @@ import android.os.Handler;
 import android.os.Looper;
 public class Tool {
     private static Handler mainHandler = new Handler(Looper.getMainLooper());
-
     /**
      * 在主线程中运行
      */

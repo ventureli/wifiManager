@@ -8,8 +8,6 @@ import android.view.Gravity
 import android.view.WindowManager
 import androidx.annotation.LayoutRes
 import com.android.fblwifi.R
-
-
 abstract class BaseDialog(context: Context,val cancelable:Boolean = true) : Dialog(context, R.style.MyDialog) {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -19,9 +17,6 @@ abstract class BaseDialog(context: Context,val cancelable:Boolean = true) : Dial
         initEvent()
     }
 
-    /**
-     * 在 (x , y) 处显示
-     */
     fun show(x: Int = -1, y: Int = -1) {
         val wl = window?.attributes
         if (x != -1) {
@@ -45,16 +40,8 @@ abstract class BaseDialog(context: Context,val cancelable:Boolean = true) : Dial
         window?.setWindowAnimations(0)
         show()
     }
-
-    /**
-     * 资源文件
-     */
     @LayoutRes
     protected abstract fun getContentResId(): Int
-
-    /**
-     *  对应的事件
-     */
     protected abstract fun initEvent()
 }
 
