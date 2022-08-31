@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id ="@+id/ll_main_container"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            >
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn_scan"
+                android:background="@color/black"
+                android:textColor="@color/white"
+                android:text="刷新"
+                >
+            </Button>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn_open"
+                android:layout_marginLeft="10dp"
+                android:background="@color/black"
+
+                android:textColor="@color/white"
+                android:text="开启WLAN"
+                >
+            </Button>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn_close"
+                android:background="@color/black"
+                android:textColor="@color/white"
+                android:layout_marginLeft="10dp"
+                android:text="关闭WLAN"
+                >
+            </Button>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn_add"
+                android:layout_marginLeft="10dp"
+                android:background="@color/black"
+                android:textColor="@color/white"
+                android:text="添加网络"
+                >
+            </Button>
+
+        </LinearLayout>
+
+        <com.android.fblwifi.WifiItemView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id = "@+id/wifi_current_item"
+            android:visibility="gone"
+            >
+        </com.android.fblwifi.WifiItemView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="@color/black"
+            android:layout_marginTop="10dp"
+            ></LinearLayout>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:id="@+id/sv_main_scroll_view"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/ll_scroll_content"
+                android:orientation="vertical"
+                >
+
+
+            </LinearLayout>
+        </ScrollView>
+
+
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

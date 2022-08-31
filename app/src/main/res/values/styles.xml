@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="radioStyle" parent="@android:style/Widget.CompoundButton.RadioButton">
+        <item name="colorAccent">@color/trans</item>
+<!--        <item name="android:button">@drawable/radio_button_selector</item>-->
+    </style>
+
+    <!--自定义dialog背景全透明无边框theme -->
+    <style name="MyDialog" parent="android:style/Theme.Dialog">
+        <!--背景颜色及和透明程度-->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:background">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <!--是否去除标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <!--是否去除边框-->
+        <item name="android:windowFrame">@null</item>
+        <!--是否浮现在activity之上-->
+        <item name="android:windowIsFloating">true</item>
+        <!--是否模糊-->
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="colorAccent">@color/black</item>
+
+        <item name="android:windowEnterAnimation">@null</item>
+        <item name="android:windowExitAnimation">@null</item>
+        <item name="android:animation">@null</item>
+        <item name="android:animationDuration">0</item>
+        <item name="android:inAnimation">@null</item>
+        <item name="android:outAnimation">@null</item>
+        <item name="android:layoutAnimation">@null</item>
+        <item name="android:animateLayoutChanges">@null</item>
+        <item name="android:windowHideAnimation">@null</item>
+        <item name="android:windowShowAnimation">@null</item>
+        <item name="android:radioButtonStyle">@style/radioStyle</item>
+        <item name="android:checkboxStyle">@style/radioStyle</item>
+    </style>
+
+</resources>
